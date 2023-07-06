@@ -34,23 +34,23 @@ lentitle = Label(root, textvariable=lenlabel).pack()
 val = IntVar()
 spinlenght = Spinbox(root, from_=8, to_=24, textvariable=val, width=13).pack()
 
-# passprint
+
 
 
 def callback():
     lsum.config(text=passgen())
 
 
-# clickable button
+
 passgenButton = Button(root, text="Generate Password", bd=5, height=2, command=callback, pady=3)
 passgenButton.pack()
 password = str(callback)
 
-# password result message
+
 lsum = Label(root, text="")
 lsum.pack(side=BOTTOM)
 
-# function
+
 poor= string.ascii_uppercase + string.ascii_lowercase
 average= string.ascii_uppercase + string.ascii_lowercase + string.digits
 symbols = """`~!@#$%^&*()_-+={}[]\|:;"'<>,.?/"""
